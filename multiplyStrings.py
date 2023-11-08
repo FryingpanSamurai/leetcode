@@ -1,7 +1,7 @@
 class Solution:
     def multiplyStrings(self, num1: str, num2: str) -> str:
         temp = list()
-        sum = 0
+        my_sum = 0
         carry = 0
         zeroes = 1
         big = num1 if len(num1) > len(num2) else num2
@@ -22,17 +22,18 @@ class Solution:
                     carry = int(str(prod)[0])
                 else:
                     carry = 0
-
+            
+            # diff btw GPT and mine is that I bring the carry as normal and they bring it out after
             if carry > 0:
                 temp.insert(0, str(carry))
 
-            sum += int(''.join(temp))
+            my_sum += int(''.join(temp))
             # bring down a zero
             temp = list('0'*zeroes)
             zeroes += 1
 
 
-        return str(sum)
+        return str(my_sum)
 
         
 

@@ -11,4 +11,4 @@ class Solution:
 if __name__ == '__main__':
     digits = [1,9]
     test = Solution()
-    test.plusOne(digits)
+    print(test.plusOne(digits))
